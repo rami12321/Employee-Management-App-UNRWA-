@@ -1,27 +1,48 @@
-# JsonApp
+JsonApp
+This project was generated using Angular CLI version 18.2.11.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+Prerequisites
+Before running the application, ensure that the following dependencies are installed:
 
-## Development server
+Node.js (version 14.x or higher)
+npm (Node package manager)
+You can verify the installation by running the following commands:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+node -v
+npm -v
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Additionally, ensure that the following packages are installed globally:
 
-## Build
+Angular CLI
+Bootstrap
+JSON Server
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Setup Instructions:
+Download the project and extract the ZIP file.
+Place the extracted folder in your desired location.
+Open your terminal, command prompt, or VS Code terminal and navigate to the project directory:
 
-## Running unit tests
+cd path/to/your/project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+Install the required dependencies by running:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+npm install -g npm
+npm install -g @angular/cli
+npm install bootstrap
+npm install -g json-server@0
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Start the JSON Server:
+
+json-server --watch db.json
+
+
+Run the Angular application:
+
+ng serve -o
+
+
+
+After executing these steps, the application should be successfully running.
