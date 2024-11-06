@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "firstName": "Rami",
+      "lastName": "Abou Eid",
+      "email": "ramiaboueid.rae@gmail.com",
+      "position": "Software Engineer",
+      "department": "Engineering",
+      "performanceRating": 4
+    },
+    {
+      "id": 2,
+      "firstName": "Reem",
+      "lastName": "Omar",
+      "email": "Reem.Omar@company.com",
+      "position": "Project Manager",
+      "department": "Management",
+      "performanceRating": 3
+    },
+    {
+      "id": 3,
+      "firstName": "Raghad",
+      "lastName": "Abou Eid",
+      "email": "RaghadAbouEid@company.com",
+      "position": "Quality Assurance",
+      "department": "Quality Control",
+      "performanceRating": 2
+    },
+    {
+      "id": 4,
+      "firstName": "Ahmad",
+      "lastName": "Saleh",
+      "email": "Ahmad.Saleh@company.com",
+      "position": "Software Developer",
+      "department": "Engineering",
+      "performanceRating": 4
+    },
+    {
+      "id": 5,
+      "firstName": "Mohammad",
+      "lastName": "Ali",
+      "email": "mohammad.ali@company.com",
+      "position": "Data Analyst",
+      "department": "Data Science",
+      "performanceRating": 3
+    },
+    {
+      "id": 6,
+      "firstName": "Osama",
+      "lastName": "khaled",
+      "email": "osama.khaled@company.com",
+      "position": "Human Resources Specialist",
+      "department": "Human Resources",
+      "performanceRating": 5
+    },
+    {
+      "id": 7,
+      "firstName": "ibrahim",
+      "lastName": "mohsen",
+      "email": "ibrahim.mohsen@company.com",
+      "position": "Marketing Coordinator",
+      "department": "Marketing",
+      "performanceRating": 4
+    }
+  ]
+}

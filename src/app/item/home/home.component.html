@@ -1,0 +1,61 @@
+<div class="container" style="margin-top: 11px;">
+  <input class="form-control" [(ngModel)]="searchQuery" placeholder="Search by Name or Department" (input)="search()">
+
+  <select class="form-control mt-2" [(ngModel)]="sortOption" (change)="sort()">
+    <option value="">Sort By</option>
+    <option value="name">Name</option>
+    <option value="department">Department</option>
+  </select>
+
+  <table class="table table-success mt-3">
+    <thead>
+      <tr class="bg-primary">
+        <th scope="col">Id</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Position</th>
+        <th scope="col">Department</th>
+        <th scope="col">Performance Rating</th>
+        <th scope="col">Details</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let itm of filteredItems">
+        <td scope="row">{{ itm.id }}</td>
+        <td>{{ itm.firstName }}</td>
+        <td>{{ itm.lastName }}</td>
+        <td>{{ itm.email }}</td>
+        <td>{{ itm.position }}</td>
+        <td>{{ itm.department }}</td>
+        <td>{{ itm.performanceRating }}</td>
+        <!-- New Details Button -->
+        <td><button class="btn btn-info" (click)="openEmployeeDetails(itm)">Details</button></td>
+        <td><button class="btn btn-primary" [routerLink]="['/item/edit', itm.id]">Edit</button></td>
+        <td><button class="btn btn-danger" (click)="delete(itm.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Popup Template -->
+  <ng-container *ngIf="showPopup">
+    <div class="popup-overlay" (click)="closePopup()">
+      <div class="popup-content" (click)="$event.stopPropagation()">
+        <button (click)="closePopup()">✖</button>
+        <h2>{{ selectedEmployee?.firstName }} {{ selectedEmployee?.lastName }}</h2>
+        <p>Email: {{ selectedEmployee?.email }}</p>
+        <p>Position: {{ selectedEmployee?.position }}</p>
+        <p>Department: {{ selectedEmployee?.department }}</p>
+        <p>Performance Rating: {{ selectedEmployee?.performanceRating }}</p>
+        <p>{{ selectedEmployee?.firstName }} {{ selectedEmployee?.lastName }} is a dedicated {{ selectedEmployee?.position }} in the {{ selectedEmployee?.department }} department, recognized for their commitment to excellence and consistent performance.</p>
+
+        <p>Past Performance Rating: 2, 5, 4, 3</p>
+
+      </div>
+    </div>
+  </ng-container>
+
+  <button class="btn btn-danger" (click)="resetData()">Reset Data</button>
+</div>

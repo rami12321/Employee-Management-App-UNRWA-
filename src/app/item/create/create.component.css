@@ -1,0 +1,14 @@
+.star-rating {
+    display: flex;
+    cursor: pointer;
+    font-size: 2em; /* Increase this value for larger stars */
+}
+
+.star {
+    color: rgba(12, 9, 9, 0.589);
+    transition: color 0.2s;
+}
+
+.star.filled {
+    color: gold;
+}
